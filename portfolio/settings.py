@@ -124,3 +124,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+try:
+    from .local_settings import *
+    print('ON DEBUG MODE')
+except ImportError:
+    print('No local settings. You are on production')
