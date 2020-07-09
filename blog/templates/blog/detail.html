@@ -1,0 +1,7 @@
+{% extends 'portfolio_app/base.html' %}
+
+    {% block content %}
+        <h2>{{ blog.title }} ({{ blog.date | date:'d M y' | upper }})</h2>
+        {{ blog.text | safe  }}
+
+    {% endblock %}
